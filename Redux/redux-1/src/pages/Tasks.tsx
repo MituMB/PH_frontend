@@ -1,3 +1,4 @@
+import { AddTaskModal } from "@/components/module/task/AddTaskModal";
 import TaskCard from "@/components/module/task/TaskCard";
 import { selectFilter, selectTask } from "@/redux/features/task/taskSlice";
 import { useAppDispatch, useAppSelector } from "@/redux/hook";
@@ -13,7 +14,7 @@ const Tasks = () => {
   return (
     <div className="space-y-4 w-6/12 mx-auto">
       <h2 className="text-2xl font-bold mb-4">Your tasks today</h2>
-
+<AddTaskModal/>
       <div className="space-y-4">
         {
           tasks.map(task =><TaskCard task={task}/>)
