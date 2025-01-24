@@ -10,10 +10,18 @@ const initialState:InitialState = {
     tasks:[
         {
             id:'222',
-            title:'fgdfgsgsg',
+            title:'Blog and social posts',
             description:'fgdfgsgsg',
             dueDate:2025/11,
             priority:'High',
+            isCompleted:false,
+        },
+        {
+            id:'222',
+            title:'bla bla',
+            description:'fgdfgsgsg',
+            dueDate:2025/11,
+            priority:'Medium',
             isCompleted:false,
         }
     ],
