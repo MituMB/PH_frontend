@@ -9,23 +9,37 @@ import {
 } from "@/components/ui/dialog"
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+import { useForm } from "react-hook-form"
+// import { Input } from "@/components/ui/input"
+// import { Label } from "@/components/ui/label"
 
 export function AddTaskModal() {
+
+  const form = useForm();
+  const onSubmit = (data) => {
+    console.log(data);
+    
+  }
   return (
+    <>
+    
     <Dialog>
       <DialogTrigger asChild>
         <Button>Add Task</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
-      <Form>
+
+      <Form {...form}>
+
+        <form onSubmit={form.handleSubmit(onSubmit)}>
   <FormField
-    control={}
+    control={form.control}
     name="title"
-    render={() => (
+    render={({field}) => (
       <FormItem>
         <FormLabel />
         <FormControl>
+          <Input {...field}/>
           { /* Your form field */}
         </FormControl>
         <FormDescription />
@@ -33,13 +47,15 @@ export function AddTaskModal() {
       </FormItem>
     )}
   />
-</Form>
-
-       
         <DialogFooter>
           <Button type="submit">Save changes</Button>
         </DialogFooter>
+  </form>
+</Form>
+
+       
       </DialogContent>
     </Dialog>
+    </>
   )
 }
