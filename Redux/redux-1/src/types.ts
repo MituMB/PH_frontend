@@ -3,6 +3,6 @@
     title:       string;
     description: string;
     dueDate:     number;
-    priority:    'High' | 'Medium' | 'Low';
+    priority:    'Low' | 'Medium' | 'High';
     isCompleted: boolean;
 }

@@ -1,7 +1,8 @@
 import { Button } from '@/components/ui/button'
+import { Checkbox } from '@/components/ui/checkbox';
 import { cn } from '@/lib/utils';
 import { ITask } from '@/types';
-import { Checkbox } from '@radix-ui/react-checkbox';
+// import { Checkbox } from '@radix-ui/react-checkbox';
 import { Trash2 } from 'lucide-react'
 import React from 'react'
 
